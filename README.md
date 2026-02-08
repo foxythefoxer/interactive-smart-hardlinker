@@ -88,7 +88,7 @@ The log includes:
 
 ## Created By
 
-Fox with assistance from Claude AI (Anthropic) - February 2026
+FoxyTheFoxer with assistance from Claude AI (Anthropic) - February 2026
 
 ## License
 
