@@ -6,7 +6,7 @@
 # By default this script expects the directory structure
 # /mnt/user/data/torrents and /mnt/user/data/media for the source and destination. 
 # This directory structure follows the recommendations found in Trash Guides for Unraid.
-# https://trash-guides.info/File-and-Folder-Structure/How-to-set-up/Unraid/
+# https://trash-guides.info/File-and-Folder-Structure/How-to-set-up/Unraid/#folder-structure
 #
 # Feel free to change the 'Base paths' as needed if you do not use this structure.
 #
