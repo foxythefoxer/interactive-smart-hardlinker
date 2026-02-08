@@ -271,12 +271,7 @@ link_recursive() {
     local src_dir="$1"
     local dst_dir="$2"
     
-    # Ensure destination directory exists
-    if ! mkdir -p "$dst_dir" 2>/dev/null; then
-        print_error "Failed to create destination directory: $dst_dir"
-        return 1
-    fi
-    log_verbose "Ensured destination directory exists: $dst_dir"
+    # Don't create destination directory here - only create when we actually need to link a file
     
     # Loop through items in source directory
     for item in "$src_dir"/*; do
@@ -300,6 +295,16 @@ link_recursive() {
                 ((SKIPPED_FILES++))
                 log_verbose "Skipped (already hardlinked): $item -> Link count: $(stat -c %h "$item")"
                 continue
+            fi
+            
+            # Only create destination directory when actually needing to link a file
+            if [ ! -d "$dst_dir" ]; then
+                if ! mkdir -p "$dst_dir" 2>/dev/null; then
+                    print_error "Failed to create destination directory: $dst_dir"
+                    ((ERROR_FILES++))
+                    continue
+                fi
+                log_verbose "Created destination directory: $dst_dir"
             fi
             
             log_verbose "Linking file: $item -> $dst_dir/"
