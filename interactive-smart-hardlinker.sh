@@ -271,7 +271,7 @@ link_recursive() {
     local src_dir="$1"
     local dst_dir="$2"
     
-    # Don't create destination directory here - only create when we actually need to link a file
+    # Don't create destination directory here - only create when actually needing to link a file
     
     # Loop through items in source directory
     for item in "$src_dir"/*; do
