@@ -1,6 +1,10 @@
 # Interactive-Smart-Hardlinker
 
-Interactive Bash script for creating hardlinks with hierarchical directory navigation and smart duplicate detection. Browse directories level-by-level, automatically skip already-hardlinked files via inode checking, and optionally save detailed logs.
+A Bash script for creating hardlinks with hierarchical directory navigation and intelligent duplicate detection. Navigate your filesystem one level at a time, select source and destination directories interactively, and create hardlinks without accidentally duplicating files.
+
+## Overview
+
+Hardlinks are powerful for managing files across different locations without consuming extra disk space, but creating them manually can be tedious and error-prone. This script solves that problem by providing an intuitive, menu-driven interface that guides you through selecting source and destination directories one level at a time. It automatically checks if files are already hardlinked before creating new links, preventing accidental duplicates that waste disk space. Originally designed for Unraid media servers following Trash Guides practices (maintaining torrents for seeding while organizing media libraries), the script is flexible enough to work on any Linux system for backup management, data deduplication, or file organization tasks.
 
 ## Features
 
