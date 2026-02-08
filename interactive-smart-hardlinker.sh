@@ -3,7 +3,7 @@
 #################################################################################################################################################
 # Interactive-Smart-Hardlinker
 #
-# By default his script look for the directory directory structure
+# By default his script look for the directory structure
 # /mnt/user/data/torrents and /mnt/user/data/media for the source and destination. 
 # This directory structure follows the recommendations found in Trash Guides for Unraid.
 # https://trash-guides.info/File-and-Folder-Structure/How-to-set-up/Unraid/
